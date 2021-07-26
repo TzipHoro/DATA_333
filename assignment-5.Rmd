@@ -1,0 +1,38 @@
+---
+title: "Assignment 5"
+output: github_document
+---
+
+## What was the relationship between population size and the number of gun murders in 2010?
+
+```{r echo=FALSE}
+#install.packages("dslabs")
+library(dslabs)
+library(ggplot2)
+```
+
+
+
+
+```{r}
+options(scipen = 999)
+ggplot(murders, aes(x = population, y = total)) +
+  geom_point(aes(color = region)) + 
+  ggtitle("Number of Gun Murders by Population") +
+  geom_smooth(method = "lm", se = FALSE, color = 'black')
+
+```
+
+
+
+The plot shows that the number of gun murders per state in 2010 increases as population increases, independent of which region the state is in.
+
+\
+
+\
+
+\
+
+\
+
+
